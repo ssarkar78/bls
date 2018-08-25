@@ -35,6 +35,33 @@
 
 <body id="top">
 
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <div class="close">&times;&nbsp;&nbsp;&nbsp;</div>
+      <div id="pop-window-head" style="height:50%"></div><br>
+      <p style="font-family:Gill, Helvetica, sans-serif">14th - 16th September 2018</p>
+      <div id="clockdiv">
+  <div>
+    <span id="days" class="days"></span>
+    <div class="smalltext">Days</div>
+  </div>
+  <div>
+    <span id="hours" class="hours"></span>
+    <div class="smalltext">Hours</div>
+  </div>
+  <div>
+    <span id="mins" class="minutes"></span>
+    <div class="smalltext">Minutes</div>
+  </div>
+  <div>
+    <span id="secs" class="seconds"></span>
+    <div class="smalltext">Seconds</div>
+  </div>
+</div>
+    </div>
+  </div>
+
     <!-- preloader
     ================================================== -->
     <div id="preloader">
@@ -596,5 +623,55 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+    var modal = document.getElementById('myModal');
+    var span = document.getElementsByClassName("close")[0];
+    $(window).on('load', function() {
+      var aWhile = 1500; // 5 seconds
+      var doSomethingAfterAWhile = function() {// do something
+        $("#myModal").fadeIn("slow");
+      }
+      setTimeout( doSomethingAfterAWhile, aWhile );
+
+    });
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    // Set the date we're counting down to
+var countDownDate = new Date("Sep 14, 2018 00:00:01").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("mins").innerHTML = minutes;
+  document.getElementById("secs").innerHTML = seconds;
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("modal-text").innerHTML = "EXPIRED";
+  }
+}, 1000);
+    </script>
 
 </body>

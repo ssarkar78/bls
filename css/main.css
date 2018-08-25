@@ -3814,3 +3814,82 @@ footer a:visited {
 }
 
 /*# sourceMappingURL=main.css.map */
+/* The Modal (background) and clock */
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 25px;
+}
+
+#clockdiv > div{
+  font-weight: 500;
+	padding: 8px;
+	border-radius: 3px;
+	background: white;
+	display: inline-block;
+  margin-bottom: 10px;
+  color:black;
+}
+
+#clockdiv div > span{
+  color:white;
+	padding: 12px;
+	border-radius: 3px;
+	background: grey;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 3px;
+	font-size: 12px;
+}
+#pop-window-head{
+  background-image: url("../images/stats-bg.jpg");
+  background-size: cover;
+}
+.modal {
+   display:none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1001; /* Sit on top */
+   left: 0px;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  align-items: center;
+  align-content: center;
+  text-align: center;
+   color:white !important;
+   background-color: #F26522;
+   margin: auto;
+   margin-top:0px !important;
+   /* border: 1px solid #888; */
+   max-width:500px;
+   height:100%;
+}
+.modal-content>h1{
+  color: black !important;
+}
+
+/* The Close Button */
+.close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
