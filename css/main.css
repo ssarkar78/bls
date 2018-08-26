@@ -2009,7 +2009,7 @@ input::-moz-focus-inner {
   width: 100%;
   height: 100vh;
   vertical-align: bottom;
-  padding-bottom: 15.6rem;
+  padding-bottom: 25.6rem;
   overflow: hidden;
   position: relative;
 }
@@ -2753,7 +2753,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .s-works {
   padding-top: 18rem;
-  padding-bottom: 18rem;
+  /* padding-bottom: 18rem; */
   background-color: #FFFFFF;
   position: relative;
 }
@@ -3829,10 +3829,10 @@ footer a:visited {
   font-weight: 500;
 	padding: 8px;
 	border-radius: 3px;
-	background: white;
+	background: #851A23;
 	display: inline-block;
   margin-bottom: 10px;
-  color:black;
+  color:white;
 }
 
 #clockdiv div > span{
@@ -3864,16 +3864,16 @@ footer a:visited {
 
 /* Modal Content/Box */
 .modal-content {
-  align-items: center;
-  align-content: center;
-  text-align: center;
+   align-items: center;
+   align-content: center;
+   text-align: center;
    color:white !important;
-   background-color: #F26522;
+   background-color: #851A23;
    margin: auto;
-   margin-top:0px !important;
+   margin-top: 1px !important;
    /* border: 1px solid #888; */
    max-width:500px;
-   height:100%;
+   height:99.5%;
 }
 .modal-content>h1{
   color: black !important;
