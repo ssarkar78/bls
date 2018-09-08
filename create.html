@@ -1,0 +1,63 @@
+<script>
+
+var fullHtml = "";
+
+var names = ["Rajesh Hurkat","Gaurav Mehta","Rashmi Patra","Vikas Pawar",
+"Mihir Modi",
+"Rajat Tuli",
+"Satyendra Mallik",
+"Sujitesh Das",
+"Surinder Kohli",
+"Mukesh Tiwari",
+"Dr Haresh Chaturvedi",
+"Annapurna A"]
+var link = [
+'https://www.linkedin.com/in/rajesh-hurkat-15969010/',
+'https://www.linkedin.com/in/gaurav-mehta-7a85234/',
+'https://www.linkedin.com/in/rashmi-ranjan-patra-9a5b0557/',
+'https://www.linkedin.com/in/vikasvpawar/',
+'https://www.linkedin.com/in/mihir-modi-2246b31/',
+'https://www.linkedin.com/in/rajat-tuli-96172b/',
+'https://www.linkedin.com/in/satyendra-mallik-2415058/',
+'https://www.linkedin.com/in/sujitesh/',
+'https://www.linkedin.com/in/kohlisurinder/',
+'https://www.linkedin.com/in/mukesh-tiwari-9ba27712/',
+'https://www.linkedin.com/in/dr-haresh-chaturvedi-55592112/',
+'https://www.linkedin.com/in/annapurna-a-20b62014/'
+]
+var company = ['Mattel Global Emerging Markets',
+'GirnarSoft',
+'Novartis',
+'GATI-KWE',
+'Zee Entertainment Enterprises Limited',
+'Happily Unmarried',
+'Intex Technologies (India) Ltd',
+'Microland Limited',
+'Jaipur Rugs',
+'Caterpillar Inc.',
+'Reliance Industries Limited',
+'Inspirage'
+]
+
+var post = ['Head HR - Mattel India & South East Asia',
+'Chief Marketing Officer',
+'Head - Technical Operations, India',
+'Head - Corporate Strategy & Analytics',
+'Chief Business Officer',
+'Co-Founder',
+'Group Head - HR',
+'Vice President - Global Human Resources',
+'Head - Human Resources',
+'Head of Talent Acquisition (Asia Pacific)',
+'Vice President - HR',
+'Director - Human Resources'
+]
+
+
+for(var i=0;i<post.length;i++){
+	var html = '<li><div class="col-block item-folio" data-aos="fade-up"> <div class="item-folio__thumb"><a class="thumb-link" title="'+names[i]+'" data-size="1050x700"><img src="images/portfolio/s'+(11+i)+'.jpg" srcset="images/portfolio/s'+(11+i)+'.jpg, images/portfolio/s10.jpg 2x" alt="bls speaker"></a></div> <div class="item-folio__text"> <h3 class="item-folio__title">'+names[i]+'</h3> <p class="item-folio__cat">'+company[i]+' ('+post[i]+')</p> </div> <a target="_blank" href="'+link[i]+'" class="item-folio__project-link" title="Project link"> Speaker Profile link </a> <div class="item-folio__caption"> <p></p> </div> </div></li>';
+	fullHtml = fullHtml+html;
+}
+console.log(fullHtml);
+
+</script>
